@@ -13,7 +13,8 @@ def midifile_to_dict(mid):
     
 mid = mido.MidiFile('midi_file.mid')
 dict = midifile_to_dict(mid)
-tempo = dict['tracks'][1][0]['tempo']
+tempo = dict['tracks'][0][0]['tempo']
+bom = 0
 
 if (bpm == 0):
     bpm = mido.tempo2bpm(tempo)
